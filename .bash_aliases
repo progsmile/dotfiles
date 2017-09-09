@@ -37,3 +37,12 @@ alias art="php artisan "
 alias y='yarn'
 alias cda='composer dumpautoload'
 alias mvn="~/Apps/maven/bin/mvn"
+
+
+#docker
+alias dcr="s docker-compose restart"
+alias dl="s docker logs "
+
+de () {
+   s docker exec -it $1 bash
+}
