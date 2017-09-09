@@ -2,7 +2,6 @@
 ## ALIASES
 ######################################
 
-alias ..="cd .."
 alias vi="sudo vim"
 alias ag="sudo apt-get install -y "
 alias rm="sudo rm -rf "
@@ -10,18 +9,16 @@ alias h="history|grep "
 alias f="find . |grep "
 alias s="sudo "
 alias pf="sudo poweroff"
-alias reconf="source ~/.bashrc"
 alias aliases="vi ~/.bash_aliases"
-alias bc='cd $OLDPWD'
 alias allow='sudo chmod -R u+rwX,go+rX,go-w $1'
 alias my="sudo chown -R $LOGNAME "
 alias listserv="service --status-all"
+alias w="sh ~/.dev.sh"
 
-
-#composer/npm
-alias cr="composer require "
-alias cu="composer update "
-alias nr="npm run "
+#functions
+mkcd () {
+    mkdir -p -- "$1" && cd -P -- "$1"
+}
 
 
 #git
@@ -33,14 +30,10 @@ alias gpl="git pull"
 alias glog="git log -15 --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gr='cd $(git rev-parse --show-cdup)'
 
+#php
 alias art="php artisan "
 
-
-#functions
-mkcd () {
-    mkdir -p -- "$1" && cd -P -- "$1"
-}
-
-
-
-
+#package panagers
+alias y='yarn'
+alias cda='composer dumpautoload'
+alias mvn="~/Apps/maven/bin/mvn"
