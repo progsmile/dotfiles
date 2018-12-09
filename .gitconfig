@@ -1,0 +1,7 @@
+[user]
+	name = Denis Klimenko
+	email = denis.klimenko.dx@gmail.com
+[core]
+	autocrlf = false
+[alias]
+	conflicts = diff --name-only --diff-filter=U
